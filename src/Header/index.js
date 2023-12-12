@@ -20,7 +20,7 @@ export const Profile = styled.div`
     display: flex;
     align-items: center;
 
-    > img { //  > img === para confirma que vou estilizar esse conteudo
+    > img { //  > img(tag html) === para confirma que vou estilizar esse conteudo
         width: 56px;
         height: 56px;
         border-radius: 50%; 

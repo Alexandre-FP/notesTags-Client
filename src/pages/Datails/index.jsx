@@ -13,12 +13,13 @@ export const Details = () => {
       <main>
         <Content>
           <ButtonText tilte="Exluir Nota" />
-            <h1>
-              Introdução ao React
-            </h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea distinctio enim laborum similique odio, quos nulla saepe earum veniam autem. Exercitationem doloremque veniam consequuntur nulla distinctio, non quis expedita? Sequi?
-              </p>
+          <h1>Introdução ao React</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+            distinctio enim laborum similique odio, quos nulla saepe earum
+            veniam autem. Exercitationem doloremque veniam consequuntur nulla
+            distinctio, non quis expedita? Sequi?
+          </p>
           <Section title="Links úteis">
             <Links>
               <li>

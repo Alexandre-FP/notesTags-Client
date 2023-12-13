@@ -1,8 +1,8 @@
 import { Container } from "./style";
 
-export const Tags = ({ title }) => {
+export const Tags = ({ title, ...rest }) => {
     return(
-        <Container>
+        <Container { ...rest }>
         { title }
     </Container>
     )

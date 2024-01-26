@@ -7,7 +7,7 @@ const AuthProvider = ({ children }) => {
     <AuthContext.Provider value={{ email: "alexandrefernandes.132132@gmail.com" }}>
       {children}
     </AuthContext.Provider>
-  )
+  ) 
 }
 
 const useAuth = () => {

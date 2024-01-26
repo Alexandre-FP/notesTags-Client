@@ -3,10 +3,11 @@ import { Input } from "../../components/Input/index.jsx";
 import { FiMail, FiLock } from "react-icons/fi";
 import { Button } from "../../components/Button/index.jsx";
 import { Link } from "react-router-dom";
-import { useAuth } from "../../hooks/auth.js";
+import { useAuth } from "../../hooks/auth.jsx";
 
 export const SainIn = () => {
     const data = useAuth()
+    console.log(data)
 
     return(
         <Container>

@@ -5,7 +5,7 @@ import { AppAuth } from "./auth.routes.jsx";
 export const Routes = () => {
   return (
     <BrowserRouter>
-      <AppAuth />
-    </BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter> 
   );
 };

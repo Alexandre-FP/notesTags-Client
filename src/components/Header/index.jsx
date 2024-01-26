@@ -12,7 +12,7 @@ export const Header = () => {
     
             <div>
               <span>Bem-vindo</span>
-              <strong>Rodrigo Gonçalves</strong>
+              <strong>Alexandre Fernandes</strong>
             </div>
           </Profile>
     

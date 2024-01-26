@@ -10,7 +10,7 @@ export const Details = () => {
   return (
     <Containter>
       <Header />
-      <main>
+      <main> 
         <Content>
           <ButtonText tilte="Exluir Nota" />
           <h1>Introdução ao React</h1>
@@ -31,7 +31,7 @@ export const Details = () => {
             </Links>
           </Section>
           <Section title="Marcadores">
-            <Tags title="Express" />
+            <Tags title="Express"/>
             <Tags title="NodeJs" />
           </Section>
           <Button title="Voltar" />

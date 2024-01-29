@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Container, Form, Background } from "./style";
 import { Input } from "../../components/Input/index.jsx";
 import { FiMail, FiLock } from "react-icons/fi";
@@ -6,8 +7,14 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../../hooks/auth.jsx";
 
 export const SainIn = () => {
-    const data = useAuth()
-    console.log(data)
+    const [email, setEmail]  = useState("");
+    const [password, setPassword]  = useState("");
+
+    const { signIn } = useAuth();
+    
+    const handleSigIn = () => {
+        signIn({ email, password })
+    }
 
     return(
         <Container>
@@ -20,13 +27,15 @@ export const SainIn = () => {
                     placeholder="E-mail"
                     type="text"
                     icon={FiMail}
+                    onChange={e => setEmail(e.target.value)}
                 />
                 <Input 
                     placeholder="Senha"
                     type="password"
                     icon={FiLock}
+                    onChange={e => setPassword(e.target.value)}
                 />
-                <Button title="Entrar" />
+                <Button title="Entrar" onClick={handleSigIn}/>
                  
                 <Link to="register">
                     Criar conta

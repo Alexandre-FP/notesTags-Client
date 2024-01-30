@@ -5,7 +5,6 @@ import { Section } from "../../components/Section/index.jsx";
 import { Tags } from "../../components/Tags/index.jsx";
 import { ButtonText } from "../../components/ButtonText/index.jsx";
 
-//children é muitas coisas, basicamante uma lista
 export const Details = () => {
   return (
     <Containter>

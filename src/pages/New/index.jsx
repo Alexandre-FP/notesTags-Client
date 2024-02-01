@@ -44,25 +44,29 @@ export const New = () => {
   };
 
   const handleNewNote = async () => {
-    if(!title){
-        return alert("Digite o título da nota")
+    if (!title) {
+      return alert("Digite o título da nota");
     }
-    
-    if(newLink){
-        return alert("Você deixou um Link no campo para adicionar, mas não calico em adicionar.")
-    } 
-    if(newTags){
-        return alert("Você deixou uma tag no campo para adicionar, mas não calico em adicionar.")
+
+    if (newLink) {
+      return alert(
+        "Você deixou um Link no campo para adicionar, mas não calico em adicionar."
+      );
     }
-    
-    await api.post(`/notes/${user.id}`, { 
+    if (newTags) {
+      return alert(
+        "Você deixou uma tag no campo para adicionar, mas não calico em adicionar."
+      );
+    }
+
+    await api.post(`/notes/${user.id}`, {
       title,
       descriptions,
       tags,
       links,
     });
     alert("Nota cadastrado com sucesso");
-    navigate("/");
+    navigate(-1);
   };
 
   return (

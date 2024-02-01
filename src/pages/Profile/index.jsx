@@ -29,7 +29,9 @@ export const Profile = () => {
         old_password: oldPassword,
       }
 
-      await atualizarUsuario({ session, avatarFile }); 
+      const sessionUpdated = Object.assign(user, session)
+
+      await atualizarUsuario({ session: sessionUpdated, avatarFile });  
     } 
       
     function handleAvatar(event){

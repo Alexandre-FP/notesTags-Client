@@ -8,6 +8,7 @@ import { Note } from "../../components/Note/index.jsx";
 import { useState, useEffect } from "react";
 import { api } from "../../services/api.js";
 import { UseAuth } from "../../hooks/auth.jsx";
+import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
   const { user } = UseAuth();
@@ -18,6 +19,10 @@ export const Home = () => {
   const [tagsSelected, setTagsSelected] = useState([]); 
 
   function handleTagsSelected(tagname){
+    if(tagname === "todos"){
+      return setTagsSelected([])
+    }
+
     const alreadySelected = tagsSelected.includes(tagname);
     if (alreadySelected) {
       const filteredTags = tagsSelected.filter((tag) => tag !== tagname);
@@ -25,6 +30,12 @@ export const Home = () => {
     } else {
       setTagsSelected((prevState) => [...prevState, tagname]);
     }
+  }
+  
+  const navigate = useNavigate();
+  
+  function handleDatails(id){
+    navigate(`/details/${id}`)
   }
 
   useEffect(() => {
@@ -75,9 +86,10 @@ export const Home = () => {
             <Note
             key={String(note.id)} 
             data={note}
+            onClick={() => handleDatails(note.id)}
             />
 
-            ))
+            )) 
         }
         </Section>
       </Content>

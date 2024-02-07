@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "http://localhost:4001/api", // requisição para o backend
+  baseURL: "https://notes-api-11pc.onrender.com/api", // requisição para o backend
 });
